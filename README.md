@@ -239,10 +239,15 @@ La estructura del proyecto permite separar claramente cada responsabilidad:
 De esta manera:
 
 📊 Excel: proporciona la información de referencia.
+
 🧠 Model: realiza los cálculos y validaciones.
+
 🖥️ View: permite la interacción mediante consola.
+
 🧪 Test: comprueba que el sistema funcione correctamente.
+
 🎧 Audio: explica el proceso real de facturación.
+
 📄 README: documenta todo el proyecto.
 
 ---
