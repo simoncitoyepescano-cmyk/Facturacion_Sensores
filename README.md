@@ -155,6 +155,7 @@ El audio complementa la información presentada en el código, las facturas y la
 
 El proyecto está organizado dentro de la carpeta principal FACTURACION_S, donde se encuentran los archivos de documentación, la información utilizada para las pruebas y el código fuente del sistema.
 
+```
 FACTURACION_S/
 │
 ├── 📄 README.md
@@ -179,6 +180,7 @@ FACTURACION_S/
     └── 🖥️ view/
         ├── __init__.py
         └── consola_sensores.py
+```
         
 ## 📄 README.md
 
