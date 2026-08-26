@@ -40,17 +40,17 @@ print("2. Generar factura")
 print("3. Salir")
 print("-----------------------")
 print("\n")
-opcion = int(input("Ingrese la opción a realizar: "))
+opcion_calcular = int(input("Ingrese la opción a realizar: "))
 print("--------------------------------------------")
 
-while opcion != 0:
-    if opcion == 1:
+while opcion_calcular != 0:
+    if opcion_calcular == 1:
         cliente_actual = Cliente(nombre_cliente,numero_servicios,precio_sensor)
         print(f"El valor a pagar por {cliente_actual.nombre_cliente} es de {facturacion_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}$")
         print("--------------------------------------------")
         print("\n")
 
-    elif opcion == 2:
+    elif opcion_calcular == 2:
         hoy=date.today()
         print(f"Factura realizada el {hoy}")
         cliente_actual= Cliente(nombre_cliente,numero_servicios,precio_sensor)
@@ -58,7 +58,7 @@ while opcion != 0:
         print("--------------------------------------------")
         print("\n")
 
-    elif opcion == 3:
+    elif opcion_calcular == 3:
         print("Hasta luego")
         print("\n")
         break
