@@ -292,6 +292,71 @@ De esta manera, el proyecto combina información real de la empresa con pruebas 
 
 ---
 
+# ▶️ Ejecución del proyecto y pruebas
+
+Para ejecutar el proyecto y comprobar el funcionamiento de las pruebas, otra persona puede descargar o clonar el repositorio y seguir los siguientes pasos.
+
+## 1️⃣ Clonar el repositorio
+
+Desde una terminal se debe ejecutar:
+
+git clone URL_DEL_REPOSITORIO
+
+Luego ingresar a la carpeta del proyecto:
+
+FACTURACION_S
+
+## 2️⃣ Verificar la estructura del proyecto
+
+Dentro de FACTURACION_S se encontrará la carpeta src, que contiene las diferentes partes del sistema:
+
+```
+FACTURACION_S/
+│
+├── README.md
+├── 🎧 Audio
+├── 📊 Archivo de Excel
+│
+└── src/
+    ├── model/
+    ├── test/
+    └── view/
+```
+
+## 3️⃣ Ejecutar las pruebas
+
+Las pruebas unitarias se encuentran dentro de:
+
+src/test/test_facturacion.py
+
+Para ejecutarlas desde la terminal, ubicándose en la carpeta FACTURACION_S, se puede utilizar:
+
+python -m unittest discover -s src/test
+
+Este comando busca automáticamente las pruebas dentro de la carpeta src/test y las ejecuta.
+
+## 4️⃣ Resultado esperado
+
+Al ejecutar las pruebas, el programa mostrará en la terminal el resultado de las pruebas realizadas.
+
+Las pruebas incluyen:
+
+🧾 Pruebas basadas en las facturas de la empresa.
+❌ 4 casos de error.
+🟣 3 casos extraordinarios.
+
+Si todas las pruebas funcionan correctamente, se mostrará un resultado indicando que las pruebas fueron ejecutadas satisfactoriamente.
+
+## 🖥️ Ejecución de la aplicación
+
+Además de las pruebas unitarias, el proyecto cuenta con una interfaz de consola ubicada en:
+
+src/view/consola_sensores.py
+
+Esta parte permite interactuar con el sistema mediante la consola y utilizar la funcionalidad de facturación.
+
+---
+
 ## 👥 Autores
 
 **Simon Yepes Cano** - 
