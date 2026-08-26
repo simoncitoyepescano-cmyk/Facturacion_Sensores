@@ -1,5 +1,5 @@
 # 🧾 Sistema de Facturación de Sensores
-.............
+
 ## 📌 Descripción del proyecto
 
 Este proyecto consiste en el desarrollo de una función para calcular el **valor a pagar por la facturación de servicios de sensores de una empresa**.
