@@ -151,7 +151,7 @@ En este audio se explica el **proceso de facturación por sensores de la empresa
 El audio complementa la información presentada en el código, las facturas y las pruebas unitarias.
 
 ---
-📂 Estructura del repositorio
+# 📂 Estructura del repositorio
 
 El proyecto está organizado dentro de la carpeta principal FACTURACION_S, donde se encuentran los archivos de documentación, la información utilizada para las pruebas y el código fuente del sistema.
 
@@ -179,7 +179,8 @@ FACTURACION_S/
     └── 🖥️ view/
         ├── __init__.py
         └── consola_sensores.py
-📄 README.md
+        
+## 📄 README.md
 
 Contiene la documentación general del proyecto, incluyendo:
 
@@ -194,35 +195,42 @@ Casos extraordinarios.
 Estructura del proyecto.
 Futuras implementaciones.
 Información de los autores.
-🎧 Audio
+
+## 🎧 Audio
 
 Contiene la explicación del proceso de facturación por sensores de la empresa.
 
 El audio permite comprender el proceso real que sirvió como base para desarrollar el sistema y realizar las diferentes pruebas.
 
-📊 Archivo de Excel
+## 📊 Archivo de Excel
 
 Contiene la información utilizada como referencia para el desarrollo del proyecto, incluyendo los datos obtenidos de las facturas de la empresa, así como la información de los casos de error y casos de prueba.
 
-🧠 model
+## 🧠 model
 
 Contiene la lógica principal del sistema.
 
 __init__.py → Permite identificar la carpeta como un paquete de Python.
+
 facturacion_sensores.py → Contiene la función encargada de realizar el cálculo de la facturación y las validaciones de los datos de entrada.
-🧪 test
+
+## 🧪 test
 
 Contiene las pruebas unitarias del proyecto.
 
 __init__.py → Permite identificar la carpeta como un paquete de Python.
+
 test_facturacion.py → Contiene las pruebas basadas en las facturas reales, los 4 casos de error y los 3 casos extraordinarios.
-🖥️ view
+
+## 🖥️ view
 
 Contiene la parte encargada de la interacción con el usuario.
 
 __init__.py → Permite identificar la carpeta como un paquete de Python.
+
 consola_sensores.py → Contiene la interfaz de consola para interactuar con el sistema de facturación.
-🔗 Organización general
+
+## 🔗 Organización general
 
 La estructura del proyecto permite separar claramente cada responsabilidad:
 
