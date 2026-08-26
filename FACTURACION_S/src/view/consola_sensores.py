@@ -45,16 +45,16 @@ print("--------------------------------------------")
 
 while opcion != 0:
     if opcion == 1:
-        informacion = Cliente(nombre_cliente,numero_servicios,precio_sensor)
-        print(f"El valor a pagar por {informacion.cliente} es de {facturacion_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}$")
+        cliente_actual = Cliente(nombre_cliente,numero_servicios,precio_sensor)
+        print(f"El valor a pagar por {cliente_actual.nombre_cliente} es de {facturacion_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}$")
         print("--------------------------------------------")
         print("\n")
 
     elif opcion == 2:
         hoy=date.today()
         print(f"Factura realizada el {hoy}")
-        informacion= Cliente(nombre_cliente,numero_servicios,precio_sensor)
-        print(informacion.detalles_compra())
+        cliente_actual= Cliente(nombre_cliente,numero_servicios,precio_sensor)
+        print(cliente_actual.detalles_compra())
         print("--------------------------------------------")
         print("\n")
 
