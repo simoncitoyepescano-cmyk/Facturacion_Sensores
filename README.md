@@ -174,32 +174,39 @@ FACTURACION_S/
     └── 📁 view/
         ├── __init__.py
         └── consola_sensores.py
+        
 📊 Archivo de Excel
 
 El archivo de Excel contiene la información utilizada como base para el desarrollo del proyecto, incluyendo los datos de las facturas y la información correspondiente a los casos de error y las pruebas realizadas.
 
 📁 src
 
-La carpeta src contiene el código fuente principal del proyecto y está dividida en tres partes:
+La carpeta src contiene el código fuente principal del proyecto y está dividida en tres :
 
 🧠 model
 
 Contiene la lógica principal del sistema.
 
 __init__.py — Permite identificar la carpeta como un paquete de Python.
+
 facturacion_sensores.py — Contiene la función encargada de realizar el cálculo de la facturación y las validaciones correspondientes.
+
 🧪 test
 
 Contiene las pruebas unitarias utilizadas para comprobar el funcionamiento del sistema.
 
 __init__.py — Permite identificar la carpeta como un paquete de Python.
+
 test_facturacion.py — Contiene las pruebas realizadas sobre la función de facturación, incluyendo las pruebas basadas en las facturas, los 4 casos de error y los 3 casos extraordinarios.
+
 🖥️ view
 
 Contiene la parte encargada de la interacción con el usuario mediante la consola.
 
 __init__.py — Permite identificar la carpeta como un paquete de Python.
+
 consola_sensores.py — Contiene la interfaz de consola utilizada para interactuar con el sistema de facturación.
+
 🔗 Organización del proyecto
 
 La estructura permite separar las diferentes responsabilidades del programa:
