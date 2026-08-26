@@ -1,5 +1,8 @@
 import unittest
-import src.model.facturacion_sensores as facturacion_sensores
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+import FACTURACION_S.src.model.logica_sensores as logica_sensores
 
 class TestsFacturacion(unittest.TestCase):
     """
@@ -25,7 +28,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 2072385
    
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(valor_calculado,valor_total_esperado)
@@ -46,7 +49,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total = round(valor_total_esperado)
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertAlmostEqual(valor_calculado,valor_total,0)
@@ -67,7 +70,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total = round(valor_total_esperado)
    
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
    
         # Verificar que el dato obtenido sea el esperado
         self.assertAlmostEqual(round(valor_calculado),valor_total)
@@ -87,7 +90,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado =  4144770
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertAlmostEqual(valor_calculado,valor_total_esperado)
@@ -107,7 +110,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 1999200
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(valor_calculado,valor_total_esperado)
@@ -127,7 +130,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 8115800
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(valor_calculado,valor_total_esperado)
@@ -147,7 +150,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 1785000
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(valor_calculado,valor_total_esperado)
@@ -168,7 +171,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 489314
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(round(valor_calculado),valor_total_esperado)
@@ -189,7 +192,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 1582846      
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(round(valor_calculado),valor_total_esperado)
@@ -210,7 +213,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 1406973      
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(round(valor_calculado),valor_total_esperado)
@@ -231,7 +234,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 5627898      
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(round(valor_calculado),valor_total_esperado)
@@ -252,7 +255,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 518096      
 
         #Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios,precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(round(valor_calculado),valor_total_esperado)
@@ -271,8 +274,8 @@ class TestsFacturacion(unittest.TestCase):
         precio_unitario: float = 241875
 
         # Verificar que el programa detecte el dato invalido
-        with self.assertRaises(facturacion_sensores.ServiciosInvalidos):
-            facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        with self.assertRaises(logica_sensores.ServiciosInvalidos):
+            logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
 
     # ERROR 2 - PRECIO UNITARIO IGUAL A CERO
@@ -286,8 +289,8 @@ class TestsFacturacion(unittest.TestCase):
         precio_unitario: float = 0
 
         # Verificar que el programa detecte el dato invalido
-        with self.assertRaises(facturacion_sensores.PrecioInvalido):
-            facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        with self.assertRaises(logica_sensores.PrecioInvalido):
+            logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
 
     # ERROR 3 - CANTIDAD DE SERVICIOS NEGATIVA
@@ -301,8 +304,8 @@ class TestsFacturacion(unittest.TestCase):
         precio_unitario: float = 241875
 
         # Verificar que el programa detecte el dato invalido
-        with self.assertRaises(facturacion_sensores.ServiciosInvalidos):
-            facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        with self.assertRaises(logica_sensores.ServiciosInvalidos):
+            logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
 
     # ERROR 4 - PRECIO UNITARIO NEGATIVO
@@ -316,8 +319,8 @@ class TestsFacturacion(unittest.TestCase):
         precio_unitario: float = -241875
 
         # Verificar que el programa detecte el dato invalido
-        with self.assertRaises(facturacion_sensores.PrecioInvalido):
-            facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        with self.assertRaises(logica_sensores.PrecioInvalido):
+            logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
 
     # CASOS DE PRUEBA EXTRAORDINARIOS
@@ -336,7 +339,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 119000
 
         # Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(valor_calculado, valor_total_esperado)
@@ -356,7 +359,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 2976.19
 
         # Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertAlmostEqual(valor_calculado, valor_total_esperado, 2)
@@ -376,7 +379,7 @@ class TestsFacturacion(unittest.TestCase):
         valor_total_esperado = 11900000
 
         # Probar la funcion que resuelve problemas
-        valor_calculado = facturacion_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
+        valor_calculado = logica_sensores.calcular_valor_factura(numero_servicios, precio_unitario)
 
         # Verificar que el dato obtenido sea el esperado
         self.assertEqual(valor_calculado, valor_total_esperado)

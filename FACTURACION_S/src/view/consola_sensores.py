@@ -1,5 +1,8 @@
 from datetime import date
-import src.model.facturacion_sensores as facturacion_sensores
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+import FACTURACION_S.src.model.logica_sensores as logica_sensores
 
 class Cliente:
     """
@@ -23,7 +26,7 @@ class Cliente:
         mostrando su nombre, la cantidad de sensores activos, el precio de cada
         sensor y el valor total que debe pagar.
         """
-        return f"Cliente: {self.nombre} \nSensores activos: {self.n_servicios} \nPrecio de cada sensor: {self.precio_sensor} \n---------------------------- \nValor a pagar: {facturacion_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}"
+        return f"Cliente: {self.nombre} \nSensores activos: {self.numero_servicios} \nPrecio de cada sensor: {self.precio_sensor} \n---------------------------- \nValor a pagar: {logica_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}"
 
 print("\n")
 
@@ -46,13 +49,19 @@ print("--------------------------------------------")
 while opcion_calcular != 0:
     if opcion_calcular == 1:
         cliente_actual = Cliente(nombre_cliente,numero_servicios,precio_sensor)
-        print(f"El valor a pagar por {cliente_actual.nombre_cliente} es de {facturacion_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}$")
+        print(f"El valor a pagar por {cliente_actual.nombre_cliente} es de {logica_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}$")
         print("--------------------------------------------")
         print("\n")
 
     elif opcion_calcular == 2:
         hoy=date.today()
         print(f"Factura realizada el {hoy}")
+        valor_antes_iva = numero_servicios * precio_sensor
+        print(f"Valor antes de IVA: {valor_antes_iva}$") 
+        valor_iva_aplicado = valor_antes_iva * 0.19
+        print(f"Valor IVA aplicado: {valor_iva_aplicado}$")
+        valor_total = valor_antes_iva + valor_iva_aplicado
+        print(f"Valor total a pagar: {valor_total}$")
         cliente_actual= Cliente(nombre_cliente,numero_servicios,precio_sensor)
         print(cliente_actual.detalles_compra())
         print("--------------------------------------------")
