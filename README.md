@@ -151,14 +151,69 @@ En este audio se explica el **proceso de facturación por sensores de la empresa
 El audio complementa la información presentada en el código, las facturas y las pruebas unitarias.
 
 ---
+📂 Contenido del repositorio
 
-## 📂 Contenido del repositorio
+El proyecto está organizado dentro de la carpeta principal FACTURACION_S, siguiendo una estructura separada para el código, las pruebas y la interacción con el usuario.
+
+FACTURACION_S/
+│
+├── 📊 Excel
+│   └── Archivo de Excel
+│       └── Información de facturas y casos de error
+│
+└── 📁 src/
+    │
+    ├── 📁 model/
+    │   ├── __init__.py
+    │   └── facturacion_sensores.py
+    │
+    ├── 📁 test/
+    │   ├── __init__.py
+    │   └── test_facturacion.py
+    │
+    └── 📁 view/
+        ├── __init__.py
+        └── consola_sensores.py
+📊 Archivo de Excel
+
+El archivo de Excel contiene la información utilizada como base para el desarrollo del proyecto, incluyendo los datos de las facturas y la información correspondiente a los casos de error y las pruebas realizadas.
+
+📁 src
+
+La carpeta src contiene el código fuente principal del proyecto y está dividida en tres partes:
+
+🧠 model
+
+Contiene la lógica principal del sistema.
+
+__init__.py — Permite identificar la carpeta como un paquete de Python.
+facturacion_sensores.py — Contiene la función encargada de realizar el cálculo de la facturación y las validaciones correspondientes.
+🧪 test
+
+Contiene las pruebas unitarias utilizadas para comprobar el funcionamiento del sistema.
+
+__init__.py — Permite identificar la carpeta como un paquete de Python.
+test_facturacion.py — Contiene las pruebas realizadas sobre la función de facturación, incluyendo las pruebas basadas en las facturas, los 4 casos de error y los 3 casos extraordinarios.
+🖥️ view
+
+Contiene la parte encargada de la interacción con el usuario mediante la consola.
+
+__init__.py — Permite identificar la carpeta como un paquete de Python.
+consola_sensores.py — Contiene la interfaz de consola utilizada para interactuar con el sistema de facturación.
+🔗 Organización del proyecto
+
+La estructura permite separar las diferentes responsabilidades del programa:
+
+View → Model → Test
+
+🖥️ View: interacción con el usuario.
+🧠 Model: lógica y cálculo de la facturación.
+🧪 Test: comprobación del funcionamiento mediante pruebas.
+📊 Excel: información de referencia utilizada para construir y validar las pruebas.
+ 
 
 | Archivo                        | Descripción                                                     |
 | ------------------------------ | --------------------------------------------------------------- |
-| 🐍 **facturacion_sensores.py** | Contiene la función encargada de calcular el valor a pagar      |
-| 🧪 **test_facturacion.py**     | Contiene las pruebas unitarias del sistema                      |
-| 🧾 **Facturas**                | Información utilizada como referencia para realizar las pruebas |
 | 🎧 **Audio**                   | Explicación del proceso de facturación por sensores             |
 | 📄 **README.md**               | Documentación y explicación general del proyecto                |
 
