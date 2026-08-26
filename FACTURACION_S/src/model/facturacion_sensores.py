@@ -1,20 +1,20 @@
 class ServiciosInvalidos(Exception):
-  """"""
-  def__init__(self):
-  super().__init__(self, "CALCULAR: Valor Factura. No es posible calcular la factura. Ingrese un valor de numero de servicios mayor que cero.")
+  """Se lanza cuando la cantidad de servicios ingresada es 0 o menor. Indica que no se puede calcular la factura sin servicios válidos."""
+  def __init__(self):
+    super().__init__(self, "CALCULAR: Valor Factura. No es posible calcular la factura. Ingrese un valor de numero de servicios mayor que cero.")
 
 class PrecioInvalido(Exception):
-  """"""
-  def__init__(self):
-  super().__init__(self, "CALCULAR: Valor Factura. No es posible calcular la factura. Ingrese un precio unitario de servicios mayor que cero.")
+  """Se lanza cuando el precio unitario de los servicios es 0 o menor. Indica que no se puede calcular la factura con un precio inválido."""
+  def __init__(self):
+    super().__init__(self, "CALCULAR: Valor Factura. No es posible calcular la factura. Ingrese un precio unitario de servicios mayor que cero.")
 
 def verificar_numero_servicios(numero_servicios):
   if numero_servicios <= 0:
-  raise ServiciosInvalidos()
+    raise ServiciosInvalidos()
 
 def verificar_precio_unitario(precio_unitario):
   if precio_unitario <= 0:
-  raise PrecioInvalido()
+    raise PrecioInvalido()
 
 def calcular_valor_factura(numero_servicios:int,precio_unitario:float)->float:
   """Devuelve un float que contiene el valor de servicios que debera pagar cada Cliente
