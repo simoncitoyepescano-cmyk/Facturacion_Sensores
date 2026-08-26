@@ -25,7 +25,9 @@ def calcular_valor_factura(numero_servicios:int,precio_unitario:float)->float:
   "precio_unitario": Es un flotante que contiene el precio unitario de cada sensor
   que podria variar según el cliente."""
 
-  iva = 0.19 * (numero_servicios * precio_unitario)
+  porcentaje_iva = 19/100 #VALOR FIJO PUESTO POR LA EMPRESA
+  
+  iva = porcentaje_iva * (numero_servicios * precio_unitario)
   valor_servicios = (numero_servicios * precio_unitario) + iva
 
   return valor_servicios
