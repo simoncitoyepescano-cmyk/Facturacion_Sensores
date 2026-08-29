@@ -347,7 +347,7 @@ Las pruebas incluyen:
 
 Si todas las pruebas funcionan correctamente, se mostrará un resultado indicando que las pruebas fueron ejecutadas satisfactoriamente.
 
-##🖥️ Ejecución de la interfaz de usuario
+## 🖥️ Ejecución de la interfaz de usuario
 
 El proyecto cuenta con una interfaz de usuario por consola que permite ingresar la información del cliente y consultar el valor de la facturación.
 
@@ -360,15 +360,15 @@ FACTURACION_S/
         └── consola_sensores.py
 ```
 
-##▶️ Pasos para ejecutar la interfaz
+## ▶️ Pasos para ejecutar la interfaz
 
-###1️⃣ Abrir una terminal
+### 1️⃣ Abrir una terminal
 
 Ubícate en la carpeta principal del proyecto:
 
 cd FACTURACION_S
 
-###2️⃣ Ejecutar la consola
+### 2️⃣ Ejecutar la consola
 
 Ejecuta el archivo de la interfaz mediante:
 
@@ -378,7 +378,7 @@ Si tu equipo utiliza python3, puedes ejecutar:
 
 python3 src/view/consola_sensores.py
 
-###3️⃣ Ingresar los datos del cliente
+### 3️⃣ Ingresar los datos del cliente
 
 Al iniciar el programa, la consola solicitará tres datos:
 
@@ -400,7 +400,7 @@ Ingrese el valor de cada sensor:
 
 Ingresa el valor unitario correspondiente al servicio.
 
-###4️⃣ Seleccionar una opción
+### 4️⃣ Seleccionar una opción
 
 Después de ingresar los datos, aparecerá el siguiente menú:
 
@@ -412,7 +412,7 @@ MENU
 3. Salir
 -----------------------
 
-###5️⃣ Calcular el valor de la factura
+### 5️⃣ Calcular el valor de la factura
 
 Selecciona la opción:
 
@@ -420,7 +420,7 @@ Selecciona la opción:
 
 El programa calculará y mostrará el valor a pagar por el cliente, utilizando el número de servicios y el valor unitario ingresados.
 
-###6️⃣ Generar la factura
+### 6️⃣ Generar la factura
 
 Selecciona:
 
@@ -438,7 +438,7 @@ El programa mostrará:
 
 El IVA aplicado en el proceso es del 19%.
 
-###7️⃣ Salir del programa
+### 7️⃣ Salir del programa
 
 Para finalizar la ejecución, selecciona:
 
@@ -448,7 +448,7 @@ El programa mostrará:
 
 Hasta luego
 
-###🔄 Flujo de interacción
+### 🔄 Flujo de interacción
 
 El funcionamiento de la interfaz puede resumirse de la siguiente manera:
 
