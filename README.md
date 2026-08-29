@@ -347,13 +347,114 @@ Las pruebas incluyen:
 
 Si todas las pruebas funcionan correctamente, se mostrará un resultado indicando que las pruebas fueron ejecutadas satisfactoriamente.
 
-## 🖥️ Ejecución de la aplicación
+##🖥️ Ejecución de la interfaz de usuario
 
-Además de las pruebas unitarias, el proyecto cuenta con una interfaz de consola ubicada en:
+El proyecto cuenta con una interfaz de usuario por consola que permite ingresar la información del cliente y consultar el valor de la facturación.
 
-src/view/consola_sensores.py
+La interfaz se encuentra en:
 
-Esta parte permite interactuar con el sistema mediante la consola y utilizar la funcionalidad de facturación.
+```
+FACTURACION_S/
+└── src/
+    └── view/
+        └── consola_sensores.py
+```
+
+##▶️ Pasos para ejecutar la interfaz
+
+###1️⃣ Abrir una terminal
+
+Ubícate en la carpeta principal del proyecto:
+
+cd FACTURACION_S
+
+###2️⃣ Ejecutar la consola
+
+Ejecuta el archivo de la interfaz mediante:
+
+python src/view/consola_sensores.py
+
+Si tu equipo utiliza python3, puedes ejecutar:
+
+python3 src/view/consola_sensores.py
+
+###3️⃣ Ingresar los datos del cliente
+
+Al iniciar el programa, la consola solicitará tres datos:
+
+Nombre del cliente
+
+Ingrese el nombre del cliente:
+
+Ingresa el nombre o identificador del cliente.
+
+Número de sensores activos
+
+Ingrese el número de sensores activos que posee el cliente:
+
+Ingresa la cantidad de servicios o sensores que tiene contratados el cliente.
+
+Valor de cada sensor
+
+Ingrese el valor de cada sensor:
+
+Ingresa el valor unitario correspondiente al servicio.
+
+###4️⃣ Seleccionar una opción
+
+Después de ingresar los datos, aparecerá el siguiente menú:
+
+-----------------------
+MENU
+-----------------------
+1. Calcular valor factura
+2. Generar factura
+3. Salir
+-----------------------
+
+###5️⃣ Calcular el valor de la factura
+
+Selecciona la opción:
+
+1
+
+El programa calculará y mostrará el valor a pagar por el cliente, utilizando el número de servicios y el valor unitario ingresados.
+
+###6️⃣ Generar la factura
+
+Selecciona:
+
+2
+
+El programa mostrará:
+
+📅 Fecha de realización de la factura.
+💰 Valor antes de IVA.
+🧾 Valor del IVA aplicado.
+💵 Valor total a pagar.
+👤 Información del cliente.
+🔢 Cantidad de sensores activos.
+💲 Precio de cada sensor.
+
+El IVA aplicado en el proceso es del 19%.
+
+###7️⃣ Salir del programa
+
+Para finalizar la ejecución, selecciona:
+
+3
+
+El programa mostrará:
+
+Hasta luego
+
+###🔄 Flujo de interacción
+
+El funcionamiento de la interfaz puede resumirse de la siguiente manera:
+
+👤 Datos del cliente → 🔢 Número de servicios → 💰 Valor unitario → 📋 Menú → 🧮 Cálculo / 🧾 Factura → ✅ Resultado
+
+La interfaz permite que el usuario interactúe directamente con el sistema mediante la consola y consulte el valor correspondiente a la facturación de los servicios de sensores.
 
 ---
 
