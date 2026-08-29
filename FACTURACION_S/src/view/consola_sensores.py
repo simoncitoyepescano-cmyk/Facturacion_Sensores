@@ -1,7 +1,7 @@
 from datetime import date
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 import FACTURACION_S.src.model.logica_sensores as logica_sensores
 
 class Cliente:
@@ -15,8 +15,8 @@ class Cliente:
     "precio_sensor": Es un flotante que representa el precio unitario de cada
     sensor o servicio, el cual puede variar dependiendo del cliente.
     """
-    def __init__(self,nombre: str, numero_servicios: int, precio_sensor: float):
-        self.nombre = nombre
+    def __init__(self,nombre_cliente: str, numero_servicios: int, precio_sensor: float):
+        self.nombre_cliente = nombre_cliente
         self.numero_servicios = numero_servicios
         self.precio_sensor = precio_sensor
 
@@ -26,7 +26,7 @@ class Cliente:
         mostrando su nombre, la cantidad de sensores activos, el precio de cada
         sensor y el valor total que debe pagar.
         """
-        return f"Cliente: {self.nombre} \nSensores activos: {self.numero_servicios} \nPrecio de cada sensor: {self.precio_sensor} \n---------------------------- \nValor a pagar: {logica_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}"
+        return f"Cliente: {self.nombre_cliente} \nSensores activos: {self.numero_servicios} \nPrecio de cada sensor: {self.precio_sensor} \n---------------------------- \nValor a pagar: {logica_sensores.calcular_valor_factura(self.numero_servicios,self.precio_sensor)}"
 
 print("\n")
 
@@ -46,7 +46,7 @@ print("\n")
 opcion_calcular = int(input("Ingrese la opción a realizar: "))
 print("--------------------------------------------")
 
-while opcion_calcular != 0:
+while opcion_calcular != 3:
     if opcion_calcular == 1:
         cliente_actual = Cliente(nombre_cliente,numero_servicios,precio_sensor)
         print(f"El valor a pagar por {cliente_actual.nombre_cliente} es de {logica_sensores.calcular_valor_factura(numero_servicios,precio_sensor)}$")
@@ -72,5 +72,5 @@ while opcion_calcular != 0:
         print("\n")
         break
         
-    opcion = int(input("Ingrese otra opción a realizar: "))
+    opcion_calcular = int(input("Ingrese otra opción a realizar: "))
     print("---------------------------------------------")
