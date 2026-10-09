@@ -4,6 +4,8 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 import FACTURACION_S.src.model.logica_sensores as logica_sensores
 
+
+
 class TestsFacturacion(unittest.TestCase):
     """
     Clase utilizada para realizar las pruebas correspondientes a cada cliente, 
