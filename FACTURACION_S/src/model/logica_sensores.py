@@ -15,6 +15,19 @@ class Cliente:
       self.numero_servicios = numero_servicios
       self.precio_sensor = precio_sensor
 
+  def is_equal(self, otro: Cliente) -> bool:
+      """ Verifica cada atributo de self contra otra
+      instancia de esta clase y dispara una excepción si no
+      son iguales"""
+
+      assert (self.nit == otro.nit)
+      assert (self.nombre_cliente == otro.nombre_cliente)
+      assert (int(self.numero_servicios) == int(otro.numero_servicios))
+      assert (float(self.precio_sensor) == float(otro.precio_sensor))
+      
+      return True
+
+  #El metodo detalles compra se hace dentro de la clase cliente ya que son los detalles de la compra realizada por el mismo
   def detalles_compra(self):
       """
       Devuelve una cadena de texto con el resumen de la compra del cliente,
@@ -52,8 +65,6 @@ def calcular_valor_factura(numero_servicios:int,precio_sensor:float)->float:
   
   return valor_servicios
 
-  def is_equal(self, otro):
-    pass
 
 class ServiciosInvalidos(Exception):
   """Se lanza cuando la cantidad de servicios ingresada es 0 o menor. Indica que no se puede calcular la factura sin servicios válidos."""
