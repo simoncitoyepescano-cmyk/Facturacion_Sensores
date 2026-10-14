@@ -171,15 +171,19 @@ FACTURACION_S/
     │
     ├── 🧠 model/
     │   ├── __init__.py
-    │   └── facturacion_sensores.py
+    │   └── logica_sensores.py
     │
     ├── 🧪 test/
     │   ├── __init__.py
     │   └── test_facturacion.py
     │
     └── 🖥️ view/
-        ├── __init__.py
-        └── consola_sensores.py
+        ├── console/
+        │   ├── __init__.py
+        │   └── consola_sensores.py
+        │
+        └── gui/
+            └── facturacion_sensores.py
 ```
         
 ## 📄 README.md
@@ -226,11 +230,10 @@ test_facturacion.py → Contiene las pruebas basadas en las facturas reales, los
 
 ## 🖥️ view
 
-Contiene la parte encargada de la interacción con el usuario.
+Contiene la parte encargada de la interacción con el usuario. Incluye dos interfaces:
 
-__init__.py → Permite identificar la carpeta como un paquete de Python.
-
-consola_sensores.py → Contiene la interfaz de consola para interactuar con el sistema de facturación.
+* **console/** → Interfaz de consola (`consola_sensores.py`) para interactuar con el sistema de facturación desde la terminal.
+* **gui/** → Interfaz gráfica de usuario (`facturacion_sensores.py`), construida con **Kivy**, que permite ingresar los datos del cliente y calcular la factura mediante ventanas y botones en lugar de texto por consola.
 
 ## 🔗 Organización general
 
@@ -306,7 +309,16 @@ Luego ingresar a la carpeta del proyecto:
 
 FACTURACION_S
 
-## 2️⃣ Verificar la estructura del proyecto
+## 2️⃣ Instalar dependencias
+
+El proyecto usa **Python 3** y, para la interfaz gráfica, la librería **Kivy**. Desde la carpeta `FACTURACION_S` se debe ejecutar:
+
+```
+pip install -r requirements.txt
+```
+
+## 3️⃣ Verificar la estructura del proyecto
+
 
 Dentro de FACTURACION_S se encontrará la carpeta src, que contiene las diferentes partes del sistema:
 
@@ -323,7 +335,7 @@ FACTURACION_S/
     └── view/
 ```
 
-## 3️⃣ Ejecutar las pruebas
+## 4️⃣ Ejecutar las pruebas
 
 Las pruebas unitarias se encuentran dentro de:
 
@@ -335,7 +347,7 @@ python -m unittest discover -s src/test
 
 Este comando busca automáticamente las pruebas dentro de la carpeta src/test y las ejecuta.
 
-## 4️⃣ Resultado esperado
+## 5️⃣ Resultado esperado
 
 Al ejecutar las pruebas, el programa mostrará en la terminal el resultado de las pruebas realizadas.
 
@@ -347,7 +359,7 @@ Las pruebas incluyen:
 
 Si todas las pruebas funcionan correctamente, se mostrará un resultado indicando que las pruebas fueron ejecutadas satisfactoriamente.
 
-## 🖥️ Ejecución de la interfaz de usuario
+## 🖥️ Ejecución de la interfaz de consola
 
 El proyecto cuenta con una interfaz de usuario por consola que permite ingresar la información del cliente y consultar el valor de la facturación.
 
@@ -357,10 +369,11 @@ La interfaz se encuentra en:
 FACTURACION_S/
 └── src/
     └── view/
-        └── consola_sensores.py
+        └── console/
+            └── consola_sensores.py
 ```
 
-## ▶️ Pasos para ejecutar la interfaz
+## ▶️ Pasos para ejecutar la interfaz de consola
 
 ### 1️⃣ Abrir una terminal
 
@@ -372,11 +385,11 @@ cd FACTURACION_S
 
 Ejecuta el archivo de la interfaz mediante:
 
-python src/view/consola_sensores.py
+python src/view/console/consola_sensores.py
 
 Si tu equipo utiliza python3, puedes ejecutar:
 
-python3 src/view/consola_sensores.py
+python3 src/view/console/consola_sensores.py
 
 ### 3️⃣ Ingresar los datos del cliente
 
@@ -455,6 +468,58 @@ El funcionamiento de la interfaz puede resumirse de la siguiente manera:
 👤 Datos del cliente → 🔢 Número de servicios → 💰 Valor unitario → 📋 Menú → 🧮 Cálculo / 🧾 Factura → ✅ Resultado
 
 La interfaz permite que el usuario interactúe directamente con el sistema mediante la consola y consulte el valor correspondiente a la facturación de los servicios de sensores.
+
+---
+
+## 🖼️ Ejecución de la interfaz gráfica (GUI)
+
+Además de la consola, el proyecto cuenta con una **interfaz gráfica de usuario (GUI)** construida con la librería **Kivy**, que permite ingresar los datos del cliente y calcular la factura mediante campos de texto y botones, en lugar de texto por consola.
+
+La interfaz se encuentra en:
+
+```
+FACTURACION_S/
+└── src/
+    └── view/
+        └── gui/
+            └── facturacion_sensores.py
+```
+
+### 1️⃣ Instalar Kivy
+
+Si aún no instalaste las dependencias del proyecto (ver el paso 2️⃣ de la sección de ejecución), instala Kivy con:
+
+```
+pip install kivy
+```
+
+### 2️⃣ Ejecutar la GUI
+
+Desde la carpeta `FACTURACION_S`, ejecuta:
+
+```
+python src/view/gui/facturacion_sensores.py
+```
+
+Si tu equipo utiliza `python3`, puedes ejecutar:
+
+```
+python3 src/view/gui/facturacion_sensores.py
+```
+
+### 3️⃣ Usar la interfaz
+
+Al abrirse la ventana, se debe:
+
+1. Ingresar el **nombre del cliente** (opcional).
+2. Ingresar el **número de servicios / sensores**.
+3. Ingresar el **precio unitario por sensor**.
+4. Presionar **"Calcular factura"** para ver el subtotal, el IVA (19 %) y el valor total a pagar.
+5. Presionar **"Limpiar"** para reiniciar el formulario.
+
+Si algún dato es inválido (vacío, no numérico, cero o negativo), la GUI muestra un mensaje de error amigable debajo de los campos y resalta el campo correspondiente en rojo, sin cerrar ni bloquear la aplicación.
+
+> ℹ️ La GUI intenta reproducir una música de fondo opcional. Si no encuentra el archivo de audio, simplemente arranca sin sonido: esta función no es necesaria para el cálculo de la factura.
 
 ---
 
